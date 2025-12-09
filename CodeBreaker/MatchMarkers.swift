@@ -33,8 +33,8 @@ struct MatchMarkers: View {
     
     func matchMarker(peg: Int) -> some View {
         
-        let exactCount: Int = matches.count(where: { $0 == .exact })
-        let foundCount = matches.count(where: { $0 != .nomatch })
+        let exactCount = matches.count { $0 == .exact }
+        let foundCount = matches.count { $0 != .nomatch }
         
         
         
